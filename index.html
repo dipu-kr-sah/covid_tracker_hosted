@@ -28,13 +28,21 @@
         enabled. Please enable it to continue.</strong
       ></noscript
     >
-    <div>
+    <div class="warning-text to-delete">
       There is a slight delay to load to bypass github pages SPA setting
 
-      <i>See 404.html file in githu repo for more details </i>
+      <i>See 404.html file in github repo for more details </i>
     </div>
     <div id="app"></div>
     <script src="./js/chunk-vendors.538cbd19.js"></script>
     <script src="./js/app.840b8021.js"></script>
+    <script>
+      setTimeout(() => {
+        const toDelete = document.getElementsByClassName("to-delete");
+        for (let el of toDelete) {
+          el.remove();
+        }
+      }, 2500);
+    </script>
   </body>
 </html>
