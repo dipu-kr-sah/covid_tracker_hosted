@@ -2,6 +2,7 @@
   const routeDetails = location.pathname.split("/");
   const repoName = routeDetails[1];
   const pathNameForSPA = location.pathname.split(repoName)[1];
-  sessionStorage.setItem("currentItem", routeDetails[1]);
+  console.log(routeDetails,pathNameForSPA);
+  sessionStorage.setItem("currentItem", pathNameForSPA);
   location.href = location.origin + "/" + repoName;
 </script>
